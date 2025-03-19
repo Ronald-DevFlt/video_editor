@@ -4,7 +4,10 @@ description: |
  A flutter package for editing video with fully customizable UI.
  Supports crop, trim, rotation and cover selection.
  Provides commands to run in order to export the video or cover.
-repository: https://github.com/LeGoffMael/video_editor
+repository: https://github.com/YOUR-FORK/video_editor
+
+# 🔹 Esto evita el error y marca el paquete como NO publicable
+publish_to: none
 
 environment:
   flutter: ">=3.0.0"
@@ -18,7 +21,12 @@ dependencies:
   path_provider: ^2.0.12
   transparent_image: ^2.0.1 # show fade-in placeholder in thumbnails generation
   video_player: ^2.6.1
-  video_thumbnail: ^0.5.3
+
+  # 🔹 Cambiamos la dependencia para que use el fork de GitHub
+  video_thumbnail:
+    git:
+      url: https://github.com/Ronald-DevFlt/video_thumbnail.git
+      ref: master  # Asegúrate de usar la rama correcta
 
 dev_dependencies:
   flutter_test:
